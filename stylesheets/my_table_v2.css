@@ -1,0 +1,113 @@
+/*@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700,300,300italic,400italic,500,500italic,700italic);
+
+ Whole document: */
+
+body{
+  font-family: Georgia,Times;
+  margin: 20px auto;
+  width: 65%;
+  font-size: 18px;
+  line-height: 29px;
+  color:#262626;
+}
+
+/*@media (min-width: 400px) {
+  body { width: 90%; font-size: 75%; }
+}
+@media (min-width: 700px) {
+  body { width: 80%; font-size: 90%; }
+}
+@media (min-width: 850px) {
+  body { width: 70%; font-size: 100%; }
+}
+@media (min-width: 1000px) {
+  body { width: 60%; font-size: 110%; }
+}
+@media (min-width: 1100px) {
+  body { width: 50%; font-size: 115%;}
+}
+@media (min-width: 1450px) {
+  body { width: 40%; font-size: 125%; }
+}*/
+
+/* Headers */
+h1,h2,h3,h4,h5,h6{
+  font-family:'Helvetic Neue',Helvetica,Arial,sans-serif;
+  font-size: 24pt;
+}
+
+p{
+  text-align:justify;
+}
+
+img + strong {margin-left:100px;}
+
+.stext1 {
+color:blue;
+font-size:20px;
+}
+
+.stext2 {
+color:red;
+font-weight:bold;
+font-size:20px;
+}
+
+.stext3 {
+ccolor:#FF6610;
+font-size:30px;
+}
+
+.stext4 {
+ccolor:#FF4100;
+font-size:30px;
+}
+
+
+#tcent {
+  text-align:center;
+}
+
+#tcent img {
+  width:100px;
+  hheight:170px;
+}
+/*.stext1, .stext2 {
+  text-align:center;
+}*/
+
+img {
+  height:auto;
+  width:100%;
+  margin:0 auto;
+}
+
+tr,th,td {
+    border: none;
+}
+
+caption {
+  text-align:center;
+  color:#000000;
+  font-size:24px;
+}
+
+table {
+  width:100%;
+}
+
+th {
+    background-color: rgb(112, 196, 105);
+    color: white;
+    font-weight: normal;
+    padding: 5px 30px;
+    text-align: center;
+  }
+  td {
+    background-color: rgb(238, 238, 238);
+    ccolor: rgb(111, 111, 111);
+    padding: 5px 30px;
+  }
+
+
+

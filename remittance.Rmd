@@ -1,0 +1,22 @@
+---
+title: "Remittance Analysis"
+author: "Rushad"
+date: "December 20, 2015"
+output: html_document
+---
+
+Here is the comparative analysis
+
+![exportsGDP](./Figures/tab1.png)
+
+Here is remittance country wise.
+
+![remittanceCC](./Figures/tab2.png)
+
+Here are some remittance figures
+
+![rem](./Figures/rem1.png)
+
+
+
+

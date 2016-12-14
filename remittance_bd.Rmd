@@ -1,0 +1,76 @@
+---
+title: Exploring remittance in Bangladesh
+output: 
+  html_document:
+    css: stylesheets/my_table_v2.css
+---
+
+```{r setup, include=FALSE}
+require(knitr)
+opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE)
+```
+
+
+```{r}
+require(WDI)
+require(ggplot2)
+require(countrycode)
+require(xtable)
+require(dplyr)
+require(googleVis)
+op <- options(gvis.plot.tag='chart')
+```
+
+
+
+
+<span class="stext2">Please be patient, it takes few seconds to load the motion chart </span>
+
+
+```{r,results='asis',tidy=FALSE}
+load("./RData/remit_cc_gdp.RData")
+
+M <- gvisMotionChart(remit.cc.gdp,
+                     idvar="country", timevar="year",
+                     xvar="GDP", yvar="remittance",
+                     colorvar="code", sizevar="GDP",
+                     options=list(width=640,
+                                  #state=myState,
+                                  height=420))
+## Display the chart in the browser
+plot(M)
+```
+
+<span class="stext1">To track the progress of Cuba, let's select <strong>Cuba</strong> in <strong>Trails</strong> panel on the <strong>bottom right </strong> of the chart. Then hit the <strong>PLAY</strong> button on the <strong>bottom left</strong> of the chart.</span> 
+
+
+
+
+# Top countries
+
+This was in 1994
+
+```{r,results='asis'}
+load("./RData/remit_cc_long.RData")
+remit.cc.long %>%
+  filter(year==1994) %>%
+  arrange(desc(remittance)) %>% 
+  slice(1:5) %>%
+  xtable(caption='Table 1: Top countries in terms of remittances') %>% 
+                      print(type = 'html',
+                            include.rownames = F,
+                            caption.placement='top')
+```
+
+This was in now
+
+```{r,results='asis'}
+remit.cc.long %>%
+  filter(year==2014) %>%
+  arrange(desc(remittance)) %>% 
+  slice(1:5) %>%
+  xtable(caption='Table 1: Top countries in terms of remittances') %>% 
+                      print(type = 'html',
+                            include.rownames = F,
+                            caption.placement='top')
+```
